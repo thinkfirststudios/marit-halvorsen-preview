@@ -457,7 +457,6 @@ a:hover { text-decoration-thickness: 3px; }
 .place__text .place__cap { margin-top: 14px; color: var(--rule); font-size: 0.9375rem; }
 
 .link--ice { display: inline-flex; align-items: center; min-height: 44px; }
-.place__text .place__link { margin-top: 6px; font-weight: 700; }
 .lake { padding-bottom: 1px; }
 
 /* Buying and selling */
