@@ -1,4 +1,4 @@
-<!-- ThinkFirst Studios sample site. Marit Halvorsen, Halvorsen & North Real Estate, the phone number and the email address are FICTIONAL and used for demonstration only. Not a real agent, brokerage or business. No licence number, statistic or testimonial on this page is real, and none are claimed. Photography is real, Creative Commons-licensed work by the photographers credited in the footer, and is of the places captioned. -->
+<!-- ThinkFirst Studios sample site. Marit Halvorsen, Halvorsen & North Real Estate, the phone number and the email address are FICTIONAL and used for demonstration only. Not a real agent, brokerage or business. No licence number, statistic or testimonial on this page is real, and none are claimed. Photographs of named places are real, Creative Commons-licensed work credited in the footer. The hero and home photographs are royalty-free stock and are not represented as being of any specific address. -->
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -16,7 +16,7 @@
   <meta property="og:image" content="https://halvorsennorth.com/assets/og-card.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=15">
   <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
@@ -43,6 +43,7 @@
       <button class="site-head__toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <a href="#about">About</a>
+        <a href="#homes">Homes</a>
         <a href="#lake-country">The Lake Country</a>
         <a href="#buying-selling">Buying &amp; Selling</a>
         <a href="#contact">Contact</a>
@@ -54,10 +55,10 @@
   <main id="main">
 
     <section class="hero" id="top">
-      <img class="hero__photo" src="assets/photos/hero-itasca-1600.webp"
-           srcset="assets/photos/hero-itasca-1000.webp 1000w, assets/photos/hero-itasca-1600.webp 1600w, assets/photos/hero-itasca-2400.webp 2400w"
-           sizes="100vw" width="2400" height="1600" fetchpriority="high"
-           alt="Birch and pine in autumn color along a still shoreline at Itasca State Park, doubled in the water.">
+      <img class="hero__photo" src="assets/photos/hero-neighborhood-1600.webp"
+           srcset="assets/photos/hero-neighborhood-1000.webp 1000w, assets/photos/hero-neighborhood-1600.webp 1600w, assets/photos/hero-neighborhood-2400.webp 2400w"
+           sizes="(max-width: 800px) 170vw, 100vw" width="2400" height="1800" fetchpriority="high"
+           alt="Looking across a neighborhood of houses and curving streets among orange and gold trees, with low hills and a wide sky beyond.">
       <div class="hero__top wrap">
         <h1 class="hero__name"><span class="hero__word"><span>Marit</span></span> <span class="hero__word"><span>Halvorsen</span></span></h1>
         <p class="hero__place">Park Rapids, Minnesota · Hubbard County Lake Country</p>
@@ -68,7 +69,7 @@
         </p>
       </div>
       <div class="hero__foot">
-        <p class="hero__caption wrap">Birch and pine at Itasca State Park in October.</p>
+        <p class="hero__caption wrap">Homes among the autumn color.</p>
       </div>
     </section>
 
@@ -108,6 +109,88 @@
           <div class="point" data-rise>
             <h3>Local on purpose.</h3>
             <p>She works one market, close in, and she’ll say when a place is wrong for you rather than let you find out in year two.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--mist" id="homes" aria-labelledby="homes-title">
+      <div class="band__top wrap">
+        <div class="homes__head" data-rise-group>
+          <h2 id="homes-title" data-rise>Homes around the lakes</h2>
+          <p data-rise>The kinds of place people come up here for.</p>
+        </div>
+        <div class="homes" data-rise-group>
+          <figure class="home" data-rise>
+            <div class="home__img">
+              <img src="assets/photos/home-lake-1200.webp"
+                   srcset="assets/photos/home-lake-700.webp 700w, assets/photos/home-lake-1200.webp 1200w"
+                   sizes="(max-width: 560px) 100vw, (max-width: 1000px) 50vw, 25vw" width="1200" height="1500" loading="lazy" decoding="async"
+                   alt="A blue wooden house at the edge of still water, with pines behind it.">
+            </div>
+            <figcaption>
+              <h3>Lake homes</h3>
+              <p>Year-round houses on the water, with a shoreline and a dock to think about.</p>
+            </figcaption>
+          </figure>
+          <figure class="home" data-rise>
+            <div class="home__img">
+              <img src="assets/photos/home-cabin-1200.webp"
+                   srcset="assets/photos/home-cabin-700.webp 700w, assets/photos/home-cabin-1200.webp 1200w"
+                   sizes="(max-width: 560px) 100vw, (max-width: 1000px) 50vw, 25vw" width="1200" height="1500" loading="lazy" decoding="async"
+                   alt="A small wooden cabin on a dark shoreline below tall pines.">
+            </div>
+            <figcaption>
+              <h3>Cabins</h3>
+              <p>Seasonal places in the pines, sold on the water, the access and the road.</p>
+            </figcaption>
+          </figure>
+          <figure class="home" data-rise>
+            <div class="home__img">
+              <img src="assets/photos/home-town-1200.webp"
+                   srcset="assets/photos/home-town-700.webp 700w, assets/photos/home-town-1200.webp 1200w"
+                   sizes="(max-width: 560px) 100vw, (max-width: 1000px) 50vw, 25vw" width="1200" height="1500" loading="lazy" decoding="async"
+                   alt="A neighborhood of houses and paths among bright autumn trees, seen from above.">
+            </div>
+            <figcaption>
+              <h3>Homes in town</h3>
+              <p>Houses on tree-lined streets, close to the shops and the trail.</p>
+            </figcaption>
+          </figure>
+          <figure class="home" data-rise>
+            <div class="home__img">
+              <img src="assets/photos/home-country-1200.webp"
+                   srcset="assets/photos/home-country-700.webp 700w, assets/photos/home-country-1200.webp 1200w"
+                   sizes="(max-width: 560px) 100vw, (max-width: 1000px) 50vw, 25vw" width="1200" height="1500" loading="lazy" decoding="async"
+                   alt="A two-story house with a wide front porch, lit up at sunset.">
+            </div>
+            <figcaption>
+              <h3>Four-season homes</h3>
+              <p>Places back from the water, built to be lived in all year.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="homes__note">Photographs show the kinds of homes out here, not specific properties.</p>
+
+        <div class="towns__wrap" data-rise-group>
+          <h3 data-rise>Where people look</h3>
+          <div class="towns">
+          <div class="town" data-rise>
+            <h4>Park Rapids</h4>
+            <p>Main Avenue, the trailhead and lakes close on every side.</p>
+          </div>
+          <div class="town" data-rise>
+            <h4>Dorset</h4>
+            <p>A one-block village a few miles northeast, right on the trail.</p>
+          </div>
+          <div class="town" data-rise>
+            <h4>Nevis</h4>
+            <p>East along the trail, with beaches on Lake Belle Taine.</p>
+          </div>
+          <div class="town" data-rise>
+            <h4>Akeley</h4>
+            <p>Further east again, and home to a giant kneeling Paul Bunyan.</p>
+          </div>
           </div>
         </div>
       </div>
@@ -351,9 +434,8 @@
         <p><a class="link--ice" href="privacy.html">Privacy</a></p>
         <details class="credits">
           <summary>Photo credits</summary>
-          <p>Photographs cropped and color-adjusted from the originals.</p>
+          <p>Photographs cropped and color-adjusted from the originals. The main photograph and the home photographs are stock from Pexels.</p>
           <ul>
-            <li><a href="https://commons.wikimedia.org/wiki/File:DeSoto_Trail_-_52421885729.jpg">Birch and pine at Itasca State Park in October</a>, Crown Star Images, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Red_Bridge_Park,_city_of_Park_Rapids,_Minnesota.jpg">Red Bridge Park, Park Rapids</a>, Richard N Horne, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Fishhook_Lake,_Hubbard_County,_Minnesota.jpg">Fishhook Lake in July</a>, Richard N Horne, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Main_Avenue_at_2nd_Street,_Park_Rapids,_Minnesota-01.jpg">Main Avenue at 2nd Street, Park Rapids</a>, Myotus, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
@@ -378,6 +460,6 @@
     <a href="mailto:marit@halvorsennorth.com">Email</a>
   </div>
 
-  <script src="script.js?v=14"></script>
+  <script src="script.js?v=15"></script>
 </body>
 </html>
