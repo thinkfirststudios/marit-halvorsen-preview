@@ -222,8 +222,6 @@ a:hover { text-decoration-thickness: 3px; }
 /* Hero: the sky of the photograph dissolves into the page ground */
 
 .hero {
-  --line: 72%;
-  --photo-h: max(66.67vw, 52svh);
   position: relative;
   display: grid;
   grid-template-rows: 72fr 28fr;
@@ -247,14 +245,12 @@ a:hover { text-decoration-thickness: 3px; }
 .hero__photo {
   position: absolute;
   z-index: 0;
-  top: calc(var(--line) - var(--photo-h) * 0.75);
-  left: calc(var(--photo-h) * -0.3);
-  width: calc(var(--photo-h) * 1.5);
+  inset: 0;
+  width: 100%;
   max-width: none;
-  height: var(--photo-h);
+  height: 100%;
   object-fit: cover;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 30%);
-  mask-image: linear-gradient(to bottom, transparent 0, #000 30%);
+  object-position: 50% 82%;
 }
 
 
@@ -535,7 +531,7 @@ body { padding-bottom: 54px; }
 .page__body ul { margin: 0.7em 0 0; padding-left: 1.2em; }
 .page__body li + li { margin-top: 0.35em; }
 .page__lede { margin-top: 14px; max-width: 34em; color: var(--steel); font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem); }
-.page__photo { width: 100%; height: clamp(180px, 28vw, 380px); object-fit: cover; object-position: 30% 72%; }
+.page__photo { width: 100%; height: clamp(180px, 28vw, 380px); object-fit: cover; object-position: 50% 76%; }
 
 /* Tablet and up */
 
@@ -543,9 +539,6 @@ body { padding-bottom: 54px; }
   .callbar { display: none; }
   body { padding-bottom: 0; }
 
-  /* Enlarged and anchored left so the fish house sits to the right of the type */
-  .hero { --photo-h: max(93.4vw, 74svh); }
-  .hero__photo { left: 0; -webkit-mask-image: none; mask-image: none; }
   .hero::after {
     background:
       linear-gradient(to right, rgba(23, 34, 43, 0.74) 0%, rgba(23, 34, 43, 0.66) 34%, rgba(23, 34, 43, 0) 50%),
