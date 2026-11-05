@@ -27,30 +27,25 @@
     });
   }
 
-  // The horizon draws outward from the left, once per band; content rises with a 70ms stagger
+  // Content rises with a 70ms stagger
   document.querySelectorAll('[data-rise-group]').forEach(function (group) {
     group.querySelectorAll('[data-rise]').forEach(function (el, i) {
       el.style.transitionDelay = (i * 70) + 'ms';
     });
   });
 
-  var bands = document.querySelectorAll('[data-band]');
   var groups = document.querySelectorAll('[data-rise-group]');
 
   if (reduced || !('IntersectionObserver' in window)) {
-    bands.forEach(function (b) { b.classList.add('is-drawn'); });
     groups.forEach(function (g) { g.classList.add('is-risen'); });
   } else {
     var seen = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        var el = entry.target;
-        if (el.hasAttribute('data-rise-group')) el.classList.add('is-risen');
-        else el.classList.add('is-drawn');
-        seen.unobserve(el);
+        entry.target.classList.add('is-risen');
+        seen.unobserve(entry.target);
       });
     }, { threshold: 0.15 });
-    bands.forEach(function (b) { seen.observe(b); });
     groups.forEach(function (g) { seen.observe(g); });
   }
 

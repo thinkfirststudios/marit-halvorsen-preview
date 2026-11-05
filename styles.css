@@ -1,4 +1,4 @@
-/* Marit Halvorsen. The system is one device: a low horizon line, and bands that stack like landscape. */
+/* Marit Halvorsen. Bands that stack like landscape, with photographs running to the page edge. */
 
 @font-face {
   font-family: "Besley";
@@ -37,7 +37,6 @@
   --measure: 1480px;
   --edge: max(var(--gutter), calc((100vw - var(--measure)) / 2));
   --head-h: 72px;
-  --line-at: 74%;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -151,10 +150,7 @@ a:hover { text-decoration-thickness: 3px; }
   top: 0;
   z-index: 40;
   background: var(--sky);
-  border-bottom: 1px solid transparent;
-  transition: border-color 200ms ease-out;
 }
-.site-head.is-condensed { border-bottom-color: var(--rule); }
 
 .site-head__row {
   display: flex;
@@ -196,7 +192,6 @@ a:hover { text-decoration-thickness: 3px; }
   flex-direction: column;
   padding: 8px var(--gutter) 20px;
   background: var(--sky);
-  border-bottom: 1px solid var(--rule);
 }
 .site-nav.is-open { display: flex; }
 .site-nav a:not(.btn) {
@@ -208,23 +203,7 @@ a:hover { text-decoration-thickness: 3px; }
 .site-nav a:not(.btn):hover { text-decoration: underline; text-decoration-color: var(--ice); text-decoration-thickness: 3px; }
 .site-nav .btn { margin-top: 8px; }
 
-/* The horizon */
-
-.horizon {
-  position: absolute;
-  z-index: 3;
-  left: 0;
-  top: 0;
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: var(--rule);
-  transform-origin: left center;
-}
-.horizon--ice { background: var(--ice); }
-
-.js .horizon { transform: scaleX(0); transition: transform 700ms ease-out; }
-.js .is-drawn .horizon { transform: scaleX(1); }
+/* Reveal */
 
 .js [data-rise] {
   opacity: 0;
@@ -233,7 +212,7 @@ a:hover { text-decoration-thickness: 3px; }
 }
 .js .is-risen [data-rise] { opacity: 1; transform: none; }
 
-/* Hero: the photograph's real shoreline lands on the page's horizon */
+/* Hero: the sky of the photograph dissolves into the page ground */
 
 .hero {
   --line: 72%;
@@ -319,19 +298,14 @@ a:hover { text-decoration-thickness: 3px; }
 .band--sky { background: var(--sky); }
 .band--deep { background: var(--deep); color: var(--mist); }
 
-.band--ruled {
-  display: grid;
-  grid-template-rows: 78fr 22fr;
-}
-.band__top { padding-top: clamp(64px, 9vw, 128px); padding-bottom: clamp(32px, 4vw, 56px); }
-.band__foot { position: relative; }
+.band__top { padding-block: clamp(64px, 9vw, 128px); }
 
 .treeline {
   height: 120px;
   background: linear-gradient(to bottom, var(--sky) 0%, var(--mist) 28%, var(--deep) 100%);
 }
 
-/* Strips: text beside a photograph that bleeds to the page edge, one horizon through both */
+/* Strips: text beside a photograph that bleeds to the page edge */
 
 .strip {
   position: relative;
@@ -348,14 +322,6 @@ a:hover { text-decoration-thickness: 3px; }
 }
 .strip__img { overflow: hidden; height: 100%; }
 .strip__img img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 2 / 1; }
-
-/* The line runs up to the photograph and stops at its edge, never across it */
-.strip__photo .horizon {
-  top: var(--line-at);
-  left: auto;
-  right: 100%;
-  width: calc(100vw - 100%);
-}
 
 .strip__cap {
   padding: 10px var(--gutter) 0;
@@ -433,9 +399,9 @@ a:hover { text-decoration-thickness: 3px; }
 
 .paths { margin-top: clamp(32px, 4vw, 56px); }
 .path + .path { margin-top: 48px; }
-.path > h3 { padding-bottom: 14px; }
+.path > h3 { padding-bottom: 6px; }
 
-.step { padding-block: 18px; border-top: 1px solid var(--rule); }
+.step { padding-block: 14px; }
 .step p { margin-top: 6px; color: var(--steel); }
 
 /* A year on the lakes */
@@ -456,7 +422,7 @@ a:hover { text-decoration-thickness: 3px; }
 .contact__body {
   display: grid;
   gap: 48px;
-  padding-block: clamp(32px, 4vw, 56px) clamp(56px, 7vw, 96px);
+  padding-block: clamp(32px, 4vw, 56px) clamp(40px, 5vw, 64px);
 }
 
 .contact__direct { display: grid; gap: 6px; align-content: start; }
@@ -505,8 +471,6 @@ a:hover { text-decoration-thickness: 3px; }
 .form__use { color: var(--rule); }
 .form .btn { justify-self: start; }
 
-.band__foot-rule { position: relative; height: 1px; }
-
 .site-foot {
   display: grid;
   gap: 4px;
@@ -528,7 +492,6 @@ a:hover { text-decoration-thickness: 3px; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: var(--deep);
-  border-top: 1px solid var(--ice);
 }
 .callbar a {
   display: flex;
@@ -541,15 +504,14 @@ a:hover { text-decoration-thickness: 3px; }
 }
 .callbar a + a { border-left: 1px solid var(--steel); }
 
-body { padding-bottom: 55px; }
+body { padding-bottom: 54px; }
 
 /* Plain inner pages */
 
 .page { min-height: 70svh; background: var(--mist); }
 .page__title { font-size: clamp(2.25rem, 1.5rem + 3.1vw, 4rem); max-width: 16em; }
 .page__head { position: relative; padding-block: clamp(56px, 8vw, 112px) clamp(32px, 4vw, 56px); }
-.page__rule { position: relative; height: 1px; }
-.page__body { padding-block: clamp(32px, 4vw, 56px) clamp(64px, 8vw, 112px); }
+.page__body { padding-block: 0 clamp(64px, 8vw, 112px); }
 .page__body > * { max-width: 36em; }
 .page__body h2 { margin-top: 1.6em; font-size: 1.5rem; }
 .page__body p { margin-top: 0.7em; }
@@ -594,7 +556,6 @@ body { padding-bottom: 55px; }
   .strip--about .strip__photo { grid-column: 2; aspect-ratio: 2 / 1; }
 
   .strip--about {
-    --line-at: 78%;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: 78fr 22fr;
     padding-top: 0;
@@ -612,7 +573,6 @@ body { padding-bottom: 55px; }
   .strip--season .strip__photo { grid-column: 1; aspect-ratio: 16 / 9; }
   .strip--season .strip__text,
   .strip--season .strip__cap { grid-column: 2; }
-  .strip--season .strip__photo .horizon { left: 100%; right: auto; }
 
   .point {
     display: grid;
@@ -681,6 +641,5 @@ body { padding-bottom: 55px; }
     animation: none !important;
     transition: none !important;
   }
-  .js .horizon { transform: none; }
   .js [data-rise] { opacity: 1; transform: none; }
 }
