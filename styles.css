@@ -275,7 +275,7 @@ a:hover { text-decoration-thickness: 3px; }
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(to bottom, rgba(23, 34, 43, 0.74) 0%, rgba(23, 34, 43, 0.6) 54%, rgba(23, 34, 43, 0.16) 68%, rgba(23, 34, 43, 0.82) 82%, var(--deep) 100%);
+    linear-gradient(to bottom, rgba(23, 34, 43, 0.58) 0%, rgba(23, 34, 43, 0.5) 58%, rgba(23, 34, 43, 0.12) 72%, rgba(23, 34, 43, 0.72) 100%);
 }
 
 .hero__photo {
@@ -286,7 +286,7 @@ a:hover { text-decoration-thickness: 3px; }
   max-width: none;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 100%;
+  object-position: 30% 50%;
   scale: 1.03;
   translate: 0 var(--py, 0);
   animation: settle 2200ms var(--ease) both;
@@ -303,18 +303,18 @@ a:hover { text-decoration-thickness: 3px; }
 }
 
 .hero__name {
-  font-size: clamp(3.25rem, 1.2rem + 9vw, 9rem);
+  font-size: clamp(2.5rem, 1.4rem + 4.6vw, 5.75rem);
   font-weight: 700;
-  line-height: 1.02;
+  line-height: 1.06;
   letter-spacing: -0.02em;
 }
 
-.hero__word { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.06em; }
-.hero__word > span { display: inline-block; animation: word 1100ms var(--ease) both 150ms; }
+.hero__word { display: block; overflow: hidden; padding-bottom: 0.08em; }
+.hero__word > span { display: block; animation: word 1100ms var(--ease) both 150ms; }
 .hero__word + .hero__word > span { animation-delay: 260ms; }
 
 .hero__place {
-  margin-top: 18px;
+  margin: 0 0 16px;
   color: var(--mist);
   font-size: 0.875rem;
   font-weight: 700;
@@ -462,7 +462,7 @@ a:hover { text-decoration-thickness: 3px; }
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(ellipse 66% 58% at 50% 50%, rgba(23, 34, 43, 0.6) 0%, rgba(23, 34, 43, 0.38) 60%, rgba(23, 34, 43, 0) 100%),
+    radial-gradient(ellipse 72% 60% at 50% 50%, rgba(23, 34, 43, 0.68) 0%, rgba(23, 34, 43, 0.44) 60%, rgba(23, 34, 43, 0) 100%),
     linear-gradient(to bottom, rgba(23, 34, 43, 0.5) 0%, rgba(23, 34, 43, 0.22) 40%, rgba(23, 34, 43, 0.3) 70%, var(--deep) 100%);
 }
 
@@ -657,7 +657,7 @@ body { padding-bottom: 76px; }
 .page__body ul { margin: 0.7em 0 0; padding-left: 1.2em; }
 .page__body li + li { margin-top: 0.35em; }
 .page__lede { margin-top: 14px; max-width: 34em; color: var(--steel); font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem); }
-.page__photo { width: 100%; height: clamp(180px, 28vw, 380px); object-fit: cover; object-position: 50% 78%; }
+.page__photo { width: 100%; height: clamp(180px, 28vw, 380px); object-fit: cover; object-position: 30% 70%; }
 
 /* Tablet and up */
 
@@ -665,8 +665,7 @@ body { padding-bottom: 76px; }
   .callbar { display: none; }
   body { padding-bottom: 0; }
 
-  .hero__name { font-size: min(10vw, 9rem, 21svh); }
-  .hero::after { background: linear-gradient(to bottom, rgba(23, 34, 43, 0.74) 0%, rgba(23, 34, 43, 0.64) 56%, rgba(23, 34, 43, 0.14) 74%, rgba(23, 34, 43, 0.5) 88%, var(--deep) 100%); }
+  .hero__name { font-size: min(6.2vw, 5.75rem, 13svh); }
   .hero__top { padding-bottom: 22vh; }
   .hero__caption { padding-bottom: 28px; }
 
