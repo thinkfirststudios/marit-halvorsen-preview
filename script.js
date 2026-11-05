@@ -6,7 +6,7 @@
   // Header condenses once the page moves
   var head = document.querySelector('[data-head]');
   if (head) {
-    var onScroll = function () { head.classList.toggle('is-condensed', window.scrollY > 24); };
+    var onScroll = function () { head.classList.toggle('is-condensed', window.scrollY > 32); };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
@@ -17,6 +17,7 @@
   if (toggle && nav) {
     var setOpen = function (open) {
       nav.classList.toggle('is-open', open);
+      head.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
       toggle.textContent = open ? 'Close' : 'Menu';
     };
@@ -35,18 +36,41 @@
   });
 
   var groups = document.querySelectorAll('[data-rise-group]');
+  var shown = document.querySelectorAll('.strip__photo, .place');
 
   if (reduced || !('IntersectionObserver' in window)) {
     groups.forEach(function (g) { g.classList.add('is-risen'); });
+    shown.forEach(function (el) { el.classList.add('is-in'); });
   } else {
     var seen = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-risen');
+        entry.target.classList.add(entry.target.hasAttribute('data-rise-group') ? 'is-risen' : 'is-in');
         seen.unobserve(entry.target);
       });
     }, { threshold: 0.15 });
     groups.forEach(function (g) { seen.observe(g); });
+    shown.forEach(function (el) { seen.observe(el); });
+  }
+
+  // Full-width photographs drift slightly against the scroll
+  var drifting = document.querySelectorAll('.hero__photo, .vista__photo, .place__photo');
+  if (!reduced && window.matchMedia('(min-width: 800px)').matches) {
+    var ticking = false;
+    var drift = function () {
+      ticking = false;
+      var vh = window.innerHeight;
+      drifting.forEach(function (img) {
+        var r = img.parentElement.getBoundingClientRect();
+        if (r.bottom < -80 || r.top > vh + 80) return;
+        var progress = (r.top + r.height / 2 - vh / 2) / (vh + r.height);
+        img.style.setProperty('--py', (progress * -r.height * 0.05).toFixed(1) + 'px');
+      });
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(drift); }
+    }, { passive: true });
+    drift();
   }
 
   // Contact form: name plus one way to reach you, nothing else required

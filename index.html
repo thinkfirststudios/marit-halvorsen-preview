@@ -16,7 +16,7 @@
   <meta property="og:image" content="https://halvorsennorth.com/assets/og-card.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=9">
   <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
@@ -37,7 +37,7 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-head" data-head>
+  <header class="site-head site-head--over" data-head>
     <div class="site-head__row">
       <a class="site-head__name" href="#top">Marit Halvorsen</a>
       <button class="site-head__toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
@@ -58,12 +58,12 @@
            srcset="assets/photos/hero-itasca-1000.webp 1000w, assets/photos/hero-itasca-1600.webp 1600w, assets/photos/hero-itasca-2400.webp 2400w"
            sizes="100vw" width="2400" height="1600" fetchpriority="high"
            alt="Birch and pine in autumn color along a still shoreline at Itasca State Park, doubled in the water.">
-      <div class="hero__top wrap" data-rise-group>
-        <h1 class="hero__name" data-rise>Marit Halvorsen</h1>
-        <p class="hero__place" data-rise>Park Rapids, Minnesota · Hubbard County Lake Country</p>
-        <p class="hero__line" data-rise>Lake property, cabins and year-round homes across the Hubbard County lakes — bought and sold at the pace the place actually moves.</p>
-        <p class="hero__actions" data-rise>
-          <a class="btn btn--light" href="#contact">Get in touch</a>
+      <div class="hero__top wrap">
+        <h1 class="hero__name"><span class="hero__word"><span>Marit</span></span> <span class="hero__word"><span>Halvorsen</span></span></h1>
+        <p class="hero__place">Park Rapids, Minnesota · Hubbard County Lake Country</p>
+        <p class="hero__line">Lake property, cabins and year-round homes across the Hubbard County lakes — bought and sold at the pace the place actually moves.</p>
+        <p class="hero__actions">
+          <a class="btn btn--light" href="#contact">Get in touch<span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
           <a class="btn btn--ghost" href="#about">How I work</a>
         </p>
       </div>
@@ -113,8 +113,6 @@
       </div>
     </section>
 
-    <div class="treeline" aria-hidden="true"></div>
-
     <section class="band--deep lake" id="lake-country" aria-labelledby="lake-title">
       <div class="vista">
         <img class="vista__photo" src="assets/photos/fishhook-lake-1600.webp"
@@ -131,69 +129,53 @@
         </div>
       </div>
 
-      <div class="strip strip--lake">
-        <div class="strip__text" data-rise-group>
+      <article class="place place--right">
+        <img class="place__photo" src="assets/photos/main-avenue-1600.webp"
+             srcset="assets/photos/main-avenue-1000.webp 1000w, assets/photos/main-avenue-1600.webp 1600w, assets/photos/main-avenue-2400.webp 2400w"
+             sizes="100vw" width="2400" height="1350" loading="lazy" decoding="async"
+             alt="The corner of Main Avenue and 2nd Street, with a folk-art mural on a storefront and hanging baskets along the block.">
+        <div class="place__text" data-rise-group>
           <h3 data-rise>Main Avenue</h3>
           <p data-rise>Downtown Park Rapids runs along a street so wide that cars park down the center of it as well as along both curbs. Summer fills it. In the off-season it goes still, and the storefronts catch the low light from end to end.</p>
+          <p class="place__cap" data-rise>Main Avenue at 2nd Street, Park Rapids.</p>
         </div>
-        <figure class="strip__photo">
-          <div class="strip__img">
-            <img src="assets/photos/main-avenue-1200.webp"
-                 srcset="assets/photos/main-avenue-700.webp 700w, assets/photos/main-avenue-1200.webp 1200w"
-                 sizes="(max-width: 800px) 100vw, 58vw" width="1200" height="600" loading="lazy" decoding="async"
-                 alt="Looking down Main Avenue in Park Rapids, with storefronts on both sides and rows of cars parked down the middle of the street.">
-          </div>
-        </figure>
-        <p class="strip__cap">Main Avenue, Park Rapids.</p>
-      </div>
+      </article>
 
-      <div class="strip strip--lake">
-        <div class="strip__text" data-rise-group>
+      <article class="place">
+        <img class="place__photo" src="assets/photos/heartland-trail-1600.webp"
+             srcset="assets/photos/heartland-trail-1000.webp 1000w, assets/photos/heartland-trail-1600.webp 1600w, assets/photos/heartland-trail-2400.webp 2400w"
+             sizes="100vw" width="2400" height="1350" loading="lazy" decoding="async"
+             alt="A paved trail running out of town between mown grass and trees on a summer day.">
+        <div class="place__text" data-rise-group>
           <h3 data-rise>The Heartland State Trail</h3>
           <p data-rise>One of the first rail-to-trail projects in the country sets out from Park Rapids along the old rail bed. It’s paved the whole way through Walker to Cass Lake, and it runs under pine and birch for most of the ride.</p>
+          <p class="place__cap" data-rise>The Heartland State Trail leaving Park Rapids.</p>
         </div>
-        <figure class="strip__photo">
-          <div class="strip__img">
-            <img src="assets/photos/heartland-trail-1200.webp"
-                 srcset="assets/photos/heartland-trail-700.webp 700w, assets/photos/heartland-trail-1200.webp 1200w"
-                 sizes="(max-width: 800px) 100vw, 58vw" width="1200" height="600" loading="lazy" decoding="async"
-                 alt="A paved trail running out of town between mown grass and trees on a summer day.">
-          </div>
-        </figure>
-        <p class="strip__cap">The Heartland State Trail leaving Park Rapids.</p>
-      </div>
+      </article>
 
-      <div class="strip strip--lake">
-        <div class="strip__text" data-rise-group>
+      <article class="place place--right">
+        <img class="place__photo" src="assets/photos/headwaters-1600.webp"
+             srcset="assets/photos/headwaters-1000.webp 1000w, assets/photos/headwaters-1600.webp 1600w, assets/photos/headwaters-2400.webp 2400w"
+             sizes="100vw" width="2400" height="1350" loading="lazy" decoding="async"
+             alt="Boulders laid across shallow water where the Mississippi River leaves Lake Itasca, with pines behind.">
+        <div class="place__text" data-rise-group>
           <h3 data-rise>Itasca State Park</h3>
           <p data-rise>A short drive north, Minnesota’s oldest state park protects the old pine around Lake Itasca and the headwaters of the Mississippi. Go on an off-season morning, when the light comes in low through the trunks.</p>
+          <p class="place__cap" data-rise>The Mississippi headwaters at Itasca State Park.</p>
         </div>
-        <figure class="strip__photo">
-          <div class="strip__img">
-            <img src="assets/photos/headwaters-1200.webp"
-                 srcset="assets/photos/headwaters-700.webp 700w, assets/photos/headwaters-1200.webp 1200w"
-                 sizes="(max-width: 800px) 100vw, 58vw" width="1200" height="600" loading="lazy" decoding="async"
-                 alt="Boulders laid across shallow water where the Mississippi River leaves Lake Itasca, with pines behind.">
-          </div>
-        </figure>
-        <p class="strip__cap">The Mississippi headwaters at Itasca State Park.</p>
-      </div>
+      </article>
 
-      <div class="strip strip--lake">
-        <div class="strip__text" data-rise-group>
+      <article class="place">
+        <img class="place__photo" src="assets/photos/lake-pines-1600.webp"
+             srcset="assets/photos/lake-pines-1000.webp 1000w, assets/photos/lake-pines-1600.webp 1600w, assets/photos/lake-pines-2400.webp 2400w"
+             sizes="100vw" width="2400" height="1350" loading="lazy" decoding="async"
+             alt="Blue water and an autumn shoreline seen between the branches of two pines.">
+        <div class="place__text" data-rise-group>
           <h3 data-rise>The lakes</h3>
           <p data-rise>Fish Hook, Potato and a great many more, lined with cabins, resorts, seasonal places and year-round homes. The lake economy does most of its living in summer. Winters run deep. In late September the color comes on and the light lies flat across the water.</p>
+          <p class="place__cap" data-rise>A lake through the pines at Itasca State Park.</p>
         </div>
-        <figure class="strip__photo">
-          <div class="strip__img">
-            <img src="assets/photos/lake-sunset-1200.webp"
-                 srcset="assets/photos/lake-sunset-700.webp 700w, assets/photos/lake-sunset-1200.webp 1200w"
-                 sizes="(max-width: 800px) 100vw, 58vw" width="1200" height="600" loading="lazy" decoding="async"
-                 alt="A hummingbird at a red feeder hanging from a pine branch, with a lake at sunset behind it.">
-          </div>
-        </figure>
-        <p class="strip__cap">Sunset on the water in Park Rapids.</p>
-      </div>
+      </article>
 
       <p class="lake__search wrap"><a class="link--ice" href="https://www.zillow.com/park-rapids-mn/" target="_blank" rel="noopener noreferrer">Search homes</a></p>
     </section>
@@ -307,8 +289,6 @@
       </article>
     </section>
 
-    <div class="treeline" aria-hidden="true"></div>
-
     <section class="band--deep contact" id="contact" aria-labelledby="contact-title">
       <div class="vista vista--contact">
         <img class="vista__photo" src="assets/photos/lake-shore-1600.webp"
@@ -365,7 +345,7 @@
           </div>
 
           <p class="form__use">What you send comes straight to Marit and goes nowhere else. No list, no newsletter.</p>
-          <button class="btn btn--light" type="submit">Send to Marit</button>
+          <button class="btn btn--light" type="submit">Send to Marit<span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></button>
         </form>
       </div>
 
@@ -382,10 +362,10 @@
             <li><a href="https://commons.wikimedia.org/wiki/File:DeSoto_Trail_-_52421885729.jpg">Birch and pine at Itasca State Park in October</a>, Crown Star Images, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Red_Bridge_Park,_city_of_Park_Rapids,_Minnesota.jpg">Red Bridge Park, Park Rapids</a>, Richard N Horne, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Fishhook_Lake,_Hubbard_County,_Minnesota.jpg">Fishhook Lake in July</a>, Richard N Horne, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Main_Avenue,_Park_Rapids,_Minnesota.jpg">Main Avenue, Park Rapids</a>, Myotus, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Main_Avenue_at_2nd_Street,_Park_Rapids,_Minnesota-01.jpg">Main Avenue at 2nd Street, Park Rapids</a>, Myotus, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:The_Heartland_State_Trail_leaving_Park_Rapids,_Minnesota.jpg">The Heartland State Trail leaving Park Rapids</a>, Richard N Horne, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Headwaters_of_the_Mississippi_River_at_Itasca_State_Park.jpg">The Mississippi headwaters at Itasca State Park</a>, Robbschultz69, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Hummingbird_at_sunset,_Park_Rapids_MN_(35479899322).jpg">Sunset on the water in Park Rapids</a>, Lorie Shaull from Washington, United States, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Itasca_State_Park,_October_2022_DSC06959.jpg">A lake through the pines at Itasca State Park</a>, Crown Star Images, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Fish_Hook_River.jpg">The Fish Hook River in late May</a>, Tim Kiser (w:User:Malepheasant), <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Park_Theater,_Park_Rapids,_Minnesota-01.jpg">The Park Theater on Main Avenue</a>, Myotus, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Itasca_State_Park,_October_2022_DSC07098.jpg">October color at Itasca State Park</a>, Crown Star Images, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li>
@@ -404,6 +384,6 @@
     <a href="mailto:marit@halvorsennorth.com">Email</a>
   </div>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>
